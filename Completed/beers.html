@@ -1,0 +1,73 @@
+<html>
+<head>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
+	<script src="js/firebase-config.js"></script>
+	<script src="js/beer.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div id="wrapper"> </div>
+	
+	<div class="nav-bar">
+		<h2 class="nav-header">&#x1F37B; MuhBeers &#x1F37B;</h2>
+		<p class="username">Yo,</p>
+	</div>
+
+	<div id="content-div">
+
+	</div>
+
+	<div class="fab">
+		<img id="plus" src="images/plus.svg" alt="fab">
+	</div>
+
+	<div class="form">
+		<img id="close" src="images/close.svg" alt="close">
+		<h2>Add a beer, friend</h2>
+		<input class="material-input" type="text" id="beer-name" placeholder="Beer Name" />
+		<!-- &#x2605; == ★  --> 	
+		<div class="rating">
+			<label>
+	    		<input type="radio" name="stars" value="1" />
+		    	<span class="icon">&#x2605;</span>
+			</label>
+			<label>
+				<input type="radio" name="stars" value="2" />
+				<span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			</label>
+			<label>
+			    <input type="radio" name="stars" value="3" />
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>   
+			</label>
+			<label>
+			    <input type="radio" name="stars" value="4" />
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			</label>
+			<label>
+			    <input type="radio" name="stars" value="5" />
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			    <span class="icon">&#x2605;</span>
+			</label>
+		</div>
+
+		<label id="file" for="image_uploads" class="btn accent">Choose image (PNG, JPG)</label>
+		<p id="filename"></p>
+		<input id="file-input" type="file" name="fileupload" value="fileupload" accept=".png, .jpg, .jpeg" class="hidden" required>
+
+		<button id="save-btn" class="btn save-btn">Save</button>
+	</div>
+
+</body>
+</html>
